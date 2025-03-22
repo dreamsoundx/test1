@@ -155,6 +155,10 @@ html {
   -o-object-fit: contain;
   object-fit: contain
 }
+.divider {
+  height: 100px;
+  background-color: #282829
+}
 .header {
   position: fixed;
   width: 100%;
@@ -251,10 +255,70 @@ html {
   text-transform: uppercase;
   border-radius: 4px;
   background-color: #fff;
-  align-self: flex-start
+  align-self: flex-start;
+  cursor: pointer
 }
 .promo__img {
   max-width: 100%
+}
+.about-us {
+  background: url(../img/about-us/image/bg1.webp) 50% 0/cover no-repeat
+}
+.about-us__container {
+  display: flex;
+  justify-content: center
+}
+.about-us__content {
+  max-width: 44.375rem;
+  background-color: #282829
+}
+.about-us__list:not(:last-child) {
+  margin-bottom: 1.6666666667em
+}
+.about-us__item {
+  display: flex;
+  padding: 2.5rem 0 2.5rem 0;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  row-gap: .625rem
+}
+.about-us__item::before {
+  content: "";
+  flex: 0 0 3.625rem;
+  min-width: 3.625rem;
+  height: 2.9375rem;
+  background: url(../img/about-us/icons/about-us-icon.svg) 0 0 no-repeat
+}
+.about-us__item:not(:last-child) {
+  border-bottom: 1px solid #55565a
+}
+.about-us__text {
+  line-height: 1.4
+}
+.about-us__button {
+  border-radius: .25rem;
+  padding: 1.5625rem 3.25rem 1.5625rem 3.25rem;
+  background-color: #fff;
+  color: #282829;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .04em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer
+}
+@media (min-width:48em) {
+  .about-us__content {
+    padding-right: 3.3125rem
+  }
+  .about-us__content {
+    padding-left: 3.3125rem
+  }
+  .about-us__text {
+    font-size: 1.5rem
+  }
 }
 @media (min-width:120em) {
   .menu__list {
@@ -332,6 +396,13 @@ html {
     row-gap: 1.25rem
   }
 }
+@media (max-width:480px) {
+  .about-us__item {
+    text-align: center;
+    flex-direction: column;
+    align-items: center
+  }
+}
 @media (max-width:20em) {
   .header__logo {
     font-size: 1.5625rem
@@ -348,6 +419,15 @@ html {
   .promo__price {
     font-size: 1.25rem
   }
+  .about-us__content {
+    padding-right: .625rem
+  }
+  .about-us__content {
+    padding-left: .625rem
+  }
+  .about-us__text {
+    font-size: 1.25rem
+  }
 }
 @media (max-width:47.99875em) {
   .menu__body {
@@ -359,7 +439,7 @@ html {
     overflow: auto;
     padding: 6.25rem .9375rem .9375rem 1.875rem;
     transition: left .3s;
-    background-color: #7cb7fa
+    background-color: #222
   }
   .menu__body::before {
     content: "";
@@ -572,9 +652,49 @@ html {
     }
   }
 }
+@media (min-width:20em)and (max-width:48em) {
+  @supports (padding-right:clamp(0.625rem ,-1.2946428571rem + 9.5982142857vw ,3.3125rem)) {
+    .about-us__content {
+      padding-right: clamp(.625rem ,-1.2946428571rem + 9.5982142857vw ,3.3125rem)
+    }
+  }
+  @supports not (padding-right:clamp(0.625rem ,-1.2946428571rem + 9.5982142857vw ,3.3125rem)) {
+    .about-us__content {
+      padding-right: calc(.625rem + 2.6875*(100vw - 20rem)/ 28)
+    }
+  }
+  @supports (padding-left:clamp(0.625rem ,-1.2946428571rem + 9.5982142857vw ,3.3125rem)) {
+    .about-us__content {
+      padding-left: clamp(.625rem ,-1.2946428571rem + 9.5982142857vw ,3.3125rem)
+    }
+  }
+  @supports not (padding-left:clamp(0.625rem ,-1.2946428571rem + 9.5982142857vw ,3.3125rem)) {
+    .about-us__content {
+      padding-left: calc(.625rem + 2.6875*(100vw - 20rem)/ 28)
+    }
+  }
+  @supports (font-size:clamp(1.25rem ,1.0714285714rem + 0.8928571429vw ,1.5rem)) {
+    .about-us__text {
+      font-size: clamp(1.25rem ,1.0714285714rem + .8928571429vw ,1.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.25rem ,1.0714285714rem + 0.8928571429vw ,1.5rem)) {
+    .about-us__text {
+      font-size: calc(1.25rem + .25*(100vw - 20rem)/ 28)
+    }
+  }
+}
 @media (any-hover:hover) {
   .menu__link:hover::after {
     -webkit-transform: scale(1);
     transform: scale(1)
+  }
+  .promo__button:hover {
+    transition: all .3s ease 0s;
+    background-color: #bcb8e9
+  }
+  .about-us__button:hover {
+    transition: all .3s ease 0s;
+    background-color: #bcb8e9
   }
 }
