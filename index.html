@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250323004340">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250323022950">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&_v=20250323004340" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&_v=20250323022950" rel="stylesheet" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -26,13 +26,13 @@
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a class="menu__link" href="#promo">Главная</a>
+									<a class="menu__link" href="#">Главная</a>
 								</li>
 								<li class="menu__item">
-									<a class="menu__link" href="#about-us">О нас</a>
+									<a class="menu__link" href="#s">О Компании</a>
 								</li>
 								<li class="menu__item">
-									<a class="menu__link" href="#">Обратная связь</a>
+									<a class="menu__link" href="#">Каталог</a>
 								</li>
 							</ul>
 						</nav>
@@ -42,7 +42,7 @@
 		</header>
 
 		<main class="page">
-			<section class="promo" id="promo">
+			<section class="promo" id="">
 				<div class="promo__container">
 					<div class="promo__content">
 						<div class="promo__body">
@@ -68,7 +68,7 @@
 									</p>
 								</li>
 							</ul>
-							<div class="promo__button">Order</div>
+							<div class="promo__button">Аренда</div>
 						</div>
 						<div class="promo__image">
 							<img class="promo__img" src="img/promo/image/promo-building.webp" alt="Image" />
@@ -78,7 +78,7 @@
 			</section>
 
 			<section class="divider"></section>
-			<section class="about-us" id="about-us">
+			<section class="about-us" id="">
 				<div class="about-us__container">
 					<div class="about-us__content">
 						<div class="about-us__list">
@@ -107,7 +107,38 @@
 								</p>
 							</div>
 						</div>
-						<div class="about-us__button">Order</div>
+						<div class="about-us__button">Аренда</div>
+					</div>
+				</div>
+			</section>
+			<section class="contact-us">
+				<div class="contact-us__container">
+					<div class="contact-us__content">
+						<div class="contact-us__body">
+							<div class="contact-us__form">
+								<form class="form-contact-us" action="#" method="get" enctype="multipart/form-data">
+									<h2 class="form-contact-us__title">Обратная связь</h2>
+									<div class="form-contact-us__body">
+										<div class="form-contact-us__item">
+											<input class="form-contact-us__input" id="input_01" autocomplete="off" placeholder="Имя" name="name" value type="text" required />
+										</div>
+										<div class="form-contact-us__item">
+											<input class="form-contact-us__input" id="input_02" autocomplete="off" placeholder="E-mail" name="email" value type="email" required />
+										</div>
+										<div class="form-contact-us__item form-contact-us__item_checkbox">
+											<input class="form-contact-us__input form-contact-us__input_checkbox" id="input_03" autocomplete="off" name="privacy" value type="checkbox" required />
+											<label class="form-contact-us__label" for="input_03">Я согласен на обработку данных</label>
+										</div>
+										<button class="form-contact-us__button" type="submit">
+											Отправить
+										</button>
+									</div>
+								</form>
+							</div>
+							<div class="contact-us__image">
+								<img class="contact-us__img" src="img/contact-us/image/woman.webp" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -118,7 +149,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250323004340"></script>
+	<script src="js/app.min.js?_v=20250323022950"></script>
 </body>
 
 </html>
